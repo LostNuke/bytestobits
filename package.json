@@ -6,7 +6,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LostNuke/BtB.js.git"
+    "url": "git+https://github.com/LostNuke/bytestobits.git"
   },
   "keywords": [
     "btb",
@@ -21,11 +21,10 @@
   "author": "LostNuke",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LostNuke/BtB.js/issues"
+    "url": "https://github.com/LostNuke/bytestobitsissues"
   },
-  "homepage": "https://github.com/LostNuke/BtB.js#readme",
+  "homepage": "https://github.com/LostNuke/bytestobits#readme",
   "dependencies": {
-    "@types/node-fetch": "^2.5.8",
     "node-fetch": "^2.6.1"
   }
 }
