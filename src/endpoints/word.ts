@@ -1,5 +1,5 @@
-import { get } from "../utils/requester"
+import {get} from "../index"
 
 export function word() {
-  return get("word")
+  return get("word");
 }
