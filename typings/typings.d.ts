@@ -27,8 +27,8 @@ declare module "bytestobits" {
   }
 
 
-  export function lyrics(song: string): Promise<string>;
-  export function madlibs(): Promise<madlibsResponse> | Promise<lyricsError>;
+  export function lyrics(song: string): Promise<lyricsResponse> | Promise<lyricsError>;
+  export function madlibs(): Promise<madlibsResponse>;
   export function meme(): Promise<memeResponse>;
   export function reddit(subreddit: string, limit?: number);
   export function text(): Promise<string>;
