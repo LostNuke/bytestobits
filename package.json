@@ -1,0 +1,31 @@
+{
+  "name": "bytestobits",
+  "version": "1.0.0",
+  "description": "The Api Wrapper for the BytesToBits API!",
+  "main": "dist/index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LostNuke/BtB.js.git"
+  },
+  "keywords": [
+    "btb",
+    "bytestobits",
+    "api",
+    "wrapper",
+    "word",
+    "madlibs",
+    "reddit",
+    "meme"
+  ],
+  "author": "LostNuke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LostNuke/BtB.js/issues"
+  },
+  "homepage": "https://github.com/LostNuke/BtB.js#readme",
+  "dependencies": {
+    "@types/node-fetch": "^2.5.8",
+    "node-fetch": "^2.6.1"
+  }
+}

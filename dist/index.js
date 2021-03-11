@@ -1,0 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.setToken = exports.word = exports.reddit = exports.meme = exports.text = exports.madlibs = exports.lyrics = void 0;
+var lyrics_1 = require("./endpoints/lyrics");
+Object.defineProperty(exports, "lyrics", { enumerable: true, get: function () { return lyrics_1.lyrics; } });
+var madlibs_1 = require("./endpoints/madlibs");
+Object.defineProperty(exports, "madlibs", { enumerable: true, get: function () { return madlibs_1.madlibs; } });
+var text_1 = require("./endpoints/text");
+Object.defineProperty(exports, "text", { enumerable: true, get: function () { return text_1.text; } });
+var meme_1 = require("./endpoints/meme");
+Object.defineProperty(exports, "meme", { enumerable: true, get: function () { return meme_1.meme; } });
+var reddit_1 = require("./endpoints/reddit");
+Object.defineProperty(exports, "reddit", { enumerable: true, get: function () { return reddit_1.reddit; } });
+var word_1 = require("./endpoints/word");
+Object.defineProperty(exports, "word", { enumerable: true, get: function () { return word_1.word; } });
+var requester_1 = require("./utils/requester");
+Object.defineProperty(exports, "setToken", { enumerable: true, get: function () { return requester_1.setToken; } });
