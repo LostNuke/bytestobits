@@ -9,6 +9,10 @@
 ```js
 const btb = require("bytestobits");
 btb.setToken("TOKEN");
+
+async function command() {
+  await word();
+}
 ```
 Before you do any requests, you **HAVE** to set your Token otherwise you will get an error!
 **You may only do 50 requests in a minute, if you go over that limit multiple times you might get banned from the API**
@@ -18,7 +22,7 @@ If you have any questions about the API join the [BtB Discord](https://discord.g
 
 ## Methods
 ```js
-lyrics(song: string)
+async lyrics(song: string)
 ```
 The lyrics method gets the lyrics endpoint of BtB! It returns a json with these values:
 title -> string
@@ -30,7 +34,7 @@ GeniusError -> string
 
 
 ```js
-madlibs()
+async madlibs()
 ```
 The madlibs function gets the madlibs endpoint of BtB, it returns you a json with:
 title -> string
@@ -40,7 +44,7 @@ questions -> number
 
 
 ```js
-meme()
+async meme()
 ```
 returns:
 title -> string
@@ -64,3 +68,15 @@ upvotes -> number
 downvotes -> number
 comments -> number
 text -> string
+
+
+```js
+async text()
+```
+returns a String
+
+
+```js
+async word()
+```
+returns a string
