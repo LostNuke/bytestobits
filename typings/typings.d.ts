@@ -25,12 +25,22 @@ declare module "bytestobits" {
   export interface lyricsError {
     GeniusError: string
   }
+  interface redditPost {
+    title: string,
+    url: string,
+    link: string,
+    subreddit: string,
+    upvotes: number,
+    downvotes: number,
+    comments: number,
+    text: string
+  }
 
 
   export function lyrics(song: string): Promise<lyricsResponse> | Promise<lyricsError>;
   export function madlibs(): Promise<madlibsResponse>;
   export function meme(): Promise<memeResponse>;
-  export function reddit(subreddit: string, limit?: number);
+  export function reddit(subreddit: string, limit?: number): Promise<redditPost[]>;
   export function text(): Promise<string>;
   export function word(): Promise<string>;
   /**
