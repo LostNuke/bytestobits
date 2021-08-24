@@ -3,22 +3,18 @@ import fetch from "node-fetch";
 const address = "https://api.bytestobits.dev/";
 let token = "";
 
-export async function get(endpoint: string, params?: string) {
-  if (params) endpoint + "?" + params;
-  console.log(token);
-  if (token == "") throw new Error("Authorization token has not been set!");
-  return fetch(address + endpoint, {
-    method: "GET",
-    headers: { Authorization: token },
-  })
-    .then((res) => {
-      return res.json().then((body) => {
-        return body;
-      });
+export function get(endpoint: string, params?: string) {
+  if (!token) throw new Error("Authorization token has not been set!");
+  if (params) endpoint += "?" + params;
+  return new Promise(resolve => {
+    fetch(address + endpoint, {
+      headers: { Authorization: token },
     })
-    .catch((error) => {
-      throw new Error(error);
-    });
+      .then((res) => res.json().then(body => resolve(body)))
+      .catch((error) => {
+        throw error;
+      });
+  });
 }
 
 export function setToken(pToken: string) {
